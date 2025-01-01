@@ -14,14 +14,18 @@ class ExpensesItem extends StatelessWidget {
           vertical: 16,
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(expense.title),
+            Text(
+              expense.title,
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
             const SizedBox(height: 4),
             Row(
               children: [
                 Text('₹${expense.amount.toStringAsFixed(2)}'),
                 // This Convert Double To String but In This Form: 12.4353 => 12.43
-                const Spacer(), 
+                const Spacer(),
                 Row(
                   children: [
                     Icon(categoryIcons[expense.category]),

@@ -50,16 +50,16 @@ class _NewItemState extends State<NewItem> {
 
       if (!context.mounted) {
         return;
+      } else {
+        Navigator.of(context).pop(
+          GroceryItem(
+            id: resData['name'],
+            name: _enteredName,
+            quantity: _enteredQuantity,
+            category: _selectedCategory,
+          ),
+        );
       }
-      
-      Navigator.of(context).pop(
-        GroceryItem(
-          id: resData['name'],
-          name: _enteredName,
-          quantity: _enteredQuantity,
-          category: _selectedCategory,
-        ),
-      );
     }
   }
 

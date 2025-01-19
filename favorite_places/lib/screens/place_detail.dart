@@ -14,13 +14,18 @@ class PlaceDetail extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(place.title),
+        backgroundColor: const Color.fromARGB(169, 0, 0, 0),
       ),
       body: Center(
-        child: Text(
-          place.title,
-          style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                color: Theme.of(context).colorScheme.onSurface,
-              ),
+        child: Stack(
+          children: [
+            Image.file(
+              place.image,
+              fit: BoxFit.cover,
+              height: double.infinity,
+              width: double.infinity,
+            ),
+          ],
         ),
       ),
     );

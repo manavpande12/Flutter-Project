@@ -12,6 +12,7 @@ class PlacesScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Your Places'),
+        backgroundColor: const Color.fromARGB(169, 0, 0, 0),
         actions: [
           IconButton(
             onPressed: () {
@@ -25,8 +26,11 @@ class PlacesScreen extends ConsumerWidget {
           )
         ],
       ),
-      body: PlacesList(
-        places: userPlaces,
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: PlacesList(
+          places: userPlaces,
+        ),
       ),
     );
   }

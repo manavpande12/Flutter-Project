@@ -16,12 +16,14 @@ class _AuthScreenState extends State<AuthScreen> {
   var _enteredPassword = '';
 
   void _submit() async {
+    final scaffoldMessenger = ScaffoldMessenger.of(context);
     final isValid = _form.currentState!.validate();
     if (!isValid) {
       return;
     } else {
       _form.currentState!.save();
     }
+
     try {
       if (_isLogin) {
         //LOGIN MODE
@@ -37,10 +39,9 @@ class _AuthScreenState extends State<AuthScreen> {
         );
       }
     } on FirebaseAuthException catch (error) {
-      if (error.code == 'email-already-in-use') {}
-      ScaffoldMessenger.of(context).clearSnackBars();
       // ?? Simply Mean value may not be null if null then show that alternative text.
-      ScaffoldMessenger.of(context).showSnackBar(
+      scaffoldMessenger.clearSnackBars();
+      scaffoldMessenger.showSnackBar(
         SnackBar(
           content: Text(
             error.message ?? ' Authentication failed.',

@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:chat_app/widgets/user_image_picker.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -20,6 +21,7 @@ class _AuthScreenState extends State<AuthScreen> {
   var _enteredPassword = '';
   File? _selectedImage;
   var _isAuthenticating = false;
+  var _enteredUsername = '';
 
   void _submit() async {
     final scaffoldMessenger = ScaffoldMessenger.of(context);
@@ -52,7 +54,14 @@ class _AuthScreenState extends State<AuthScreen> {
             .child('${userCredentials.user!.uid}.jpg');
         await storageRef.putFile(_selectedImage!);
         final imageUrl = await storageRef.getDownloadURL();
-        print(imageUrl);
+        await FirebaseFirestore.instance
+            .collection('users')
+            .doc(userCredentials.user!.uid)
+            .set({
+          'username': _enteredUsername,
+          'email': _enteredEmail,
+          'image_url': imageUrl,
+        });
       }
     } on FirebaseAuthException catch (error) {
       if (error.code == 'email-already-in-use') {
@@ -130,19 +139,38 @@ class _AuthScreenState extends State<AuthScreen> {
                           const SizedBox(height: 20),
                           TextFormField(
                             decoration: const InputDecoration(
-                              labelText: 'PASSWORD',
+                              labelText: 'USERNAME',
                             ),
-                            obscureText: true,
+                            enableSuggestions: false,
                             validator: (value) {
-                              if (value == null || value.trim().length < 6) {
-                                return 'Password must be at least 6 characters long!';
+                              if (value == null ||
+                                  value.trim().isEmpty ||
+                                  value.trim().length < 4) {
+                                return 'Please enter valid username!';
                               }
                               return null;
                             },
                             onSaved: (value) {
-                              _enteredPassword = value!;
+                              _enteredUsername = value!;
                             },
                           ),
+                          const SizedBox(height: 20),
+                          if (!_isLogin)
+                            TextFormField(
+                              decoration: const InputDecoration(
+                                labelText: 'PASSWORD',
+                              ),
+                              obscureText: true,
+                              validator: (value) {
+                                if (value == null || value.trim().length < 6) {
+                                  return 'Password must be at least 6 characters long!';
+                                }
+                                return null;
+                              },
+                              onSaved: (value) {
+                                _enteredPassword = value!;
+                              },
+                            ),
                           const SizedBox(height: 20),
                           if (_isAuthenticating)
                             const CircularProgressIndicator(),

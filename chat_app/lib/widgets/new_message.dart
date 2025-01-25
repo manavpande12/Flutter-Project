@@ -31,7 +31,7 @@ class _NewMessageState extends State<NewMessage> {
         .collection('users')
         .doc(user.uid)
         .get();
-    // ... firestore ...
+    // ... firestore   ...
     // automatically genrate unique id
     await FirebaseFirestore.instance.collection('chat').add({
       'text': enteredMessage,
@@ -39,6 +39,8 @@ class _NewMessageState extends State<NewMessage> {
       'userId': user.uid,
       'username': userData.data()!['username'],
       'userimage': userData.data()!['image_url'],
+      // 'username': userData.get('username'),
+      // 'userimage': userData.get('image_url'),
     });
   }
 

@@ -12,7 +12,7 @@ var kDarkColorScheme = ColorScheme.fromSeed(
 );
 void main() {
   // // here first  lock orientation then run app
-  // WidgetsFlutterBinding.ensureInitialized(); 
+  // WidgetsFlutterBinding.ensureInitialized();
   // SystemChrome.setPreferredOrientations([
   //   DeviceOrientation.portraitUp,
   // ]).then((fn){
@@ -28,7 +28,6 @@ void main() {
       darkTheme: ThemeData.dark().copyWith(
         colorScheme: kDarkColorScheme,
         // copyWith() - we are ovrriding default style to customize our style
-
 
         cardTheme: const CardTheme().copyWith(
           color: kDarkColorScheme.secondaryContainer,
@@ -81,5 +80,4 @@ void main() {
       home: Expenses(),
     ),
   );
-  
 }

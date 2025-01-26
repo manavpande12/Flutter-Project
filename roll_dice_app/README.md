@@ -1,16 +1,29 @@
-# roll_dice_app
+# 🎲 ROLL DICE APK
 
-A new Flutter project.
+A simple and fun Flutter application that simulates dice rolls! With **Roll Dice APK**, users can roll a dice by clicking a button, and the app dynamically updates the dice image and state with a modern, clean UI.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+![DICE](https://github.com/user-attachments/assets/c129107d-7c90-4986-bcff-0a9b52c49b01)
 
-A few resources to get you started if this is your first Flutter project:
+## ✨ Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Simple Dice Roll**: Roll the dice by clicking a button.  
+- **Dynamic State Update**: The dice image changes based on the rolled number.  
+- **Modern UI**: Designed with Google Fonts for an elegant and user-friendly experience.  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tech Stack
+
+- **Framework**: Flutter  
+- **Programming Language**: Dart  
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Flutter SDK installed  
+- Dart configured  
+
+### Installation
+- `flutter pub get`  
+- `flutter run`
+

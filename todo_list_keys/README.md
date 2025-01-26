@@ -1,16 +1,19 @@
-# todo_list_keys
+# TO-DO LIST APK  
 
-A new Flutter project.
+A simple and efficient to-do list application built with **Flutter & Dart** to help you manage tasks effortlessly.  
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+![TO-DO](https://github.com/user-attachments/assets/f284b04e-583a-4526-a268-345134417591)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Features  
+- **Task Sorting**:  
+
+  Arrange your tasks in **ascending** or **descending** order for better organization.  
+- **State Management**:  
+  Seamlessly handle the state of checkboxes to mark tasks as complete or incomplete.  
+- **Unique Key Usage**:  
+  Utilize unique keys for efficient task identification and management, ensuring smooth app performance.  
+
+

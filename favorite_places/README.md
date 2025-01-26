@@ -1,16 +1,32 @@
-# favorite_places
+# 📍 GEO CAMERA APK
 
-A new Flutter project.
+A Flutter application designed to capture moments and tag them with precise locations! **Geo Camera APK** integrates Google Maps API to provide a seamless geolocation experience.
 
-## Getting Started
+![GEO](https://github.com/user-attachments/assets/0e16f2c1-ee52-4a2e-9113-21c637e134f4)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## ✨ Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Capture Locations**: Snap pictures and automatically tag them with the current location.  
+- **Manual Location Selection**: Drag and drop to select locations on the map.  
+- **Google Maps API Integration**: Retrieve accurate geolocation and addresses.  
+- **Manage Places Dashboard**: Organize and view all captured locations.  
+- **Address Retrieval**: Fetch and display detailed addresses for each tagged location.  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tech Stack
+
+- **Framework**: Flutter  
+- **Programming Language**: Dart  
+- **APIs**: Google Maps API  
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Flutter SDK installed  
+- Dart configured  
+- Google Maps API Key  
+
+### Installation
+- `flutter pub get`  
+- `flutter run`

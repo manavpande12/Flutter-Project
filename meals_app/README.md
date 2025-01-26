@@ -1,16 +1,35 @@
-# meals_app
+# 🍴 MEALS APK
 
-A new Flutter project.
+A Flutter application designed to explore and organize meal recipes with ease! **Meals APK** offers meal categories, dietary filters, and an intuitive design to make your cooking journey enjoyable and personalized.
 
-## Getting Started
+![MEALS](https://github.com/user-attachments/assets/1196e2ca-8bb3-41d0-bfd3-81519898d1b2)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## ✨ Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Meal Categories**: Browse meals organized into various categories.  
+- **Dietary Filters**: Filter meals based on dietary preferences like gluten-free, vegan-free, etc.  
+- **Favorites Drawer**: Save and access your favorite meals easily.  
+- **Set Filters**: Customize your preferences to view only meals that suit your diet.  
+- **Recipe Details**: View detailed recipes with images for each meal.  
+- **Smooth Animations**: Enhanced app experience with fluid animations.  
+- **Modern UI**: Elegant, user-friendly design for a seamless experience.  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tech Stack
+
+- **Framework**: Flutter  
+- **Programming Language**: Dart  
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Flutter SDK installed  
+- Dart configured  
+
+### Installation
+- `flutter pub get`  
+- `flutter run`
+
+---
+
